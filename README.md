@@ -65,7 +65,7 @@ To assure the quality of the project, some measures have been taken:
 To run this project on development mode, install it locally using yarn:
 
 ```
-$ cd ~/directory-where-the-project-was-cloned/growth
+$ cd ~/directory-where-the-project-was-cloned/growth-test
 $ yarn
 $ yarn start
 ```
