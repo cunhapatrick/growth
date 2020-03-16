@@ -31,7 +31,7 @@ const LoadingCard = (
 		].map((skeleton) => (
 			<Style.Col key={skeleton} xs={12} md={6}>
 				<Style.Card className="card-loading">
-					<Skeleton loading active />
+					<Skeleton loading active paragraph={{ rows: 8 }} />
 				</Style.Card>
 			</Style.Col>
 		))}
@@ -89,7 +89,7 @@ export const Home = ({
 					<Style.Empty
 						image={<ShoppingTwoTone />}
 						imageStyle={{ fontSize: 240, height: 240 }}
-						description="Nenhum produto foi encontrado"
+						description="No product found"
 					/>
 				</Style.Col>
 			</Row>
@@ -98,9 +98,9 @@ export const Home = ({
 	return (
 		<>
 			<Style.PageHeader
-				title="Produtos"
+				title="Products"
 				extra={[
-					`Ordem: `,
+					'Order: ',
 					<Button
 						key="dsf"
 						type="link"

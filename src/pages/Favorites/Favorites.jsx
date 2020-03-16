@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 // Antd components
@@ -7,25 +7,18 @@ import { Pagination, Row, Col } from 'antd';
 // Components
 import ProductCard from 'components/ProductCard';
 
-// Functions
-
 // CSS
 import * as Style from './Favorites.style';
 
-// const LoadingCard = lazy(() => import('components/Skeleton'));
-const LoadingCard = <div>Loading...</div>;
-
 export const Favorites = ({ favorites, page, handlePagination, goBack }) => (
 	<>
-		<Style.PageHeader title="Favoritos" onBack={() => goBack()} />
+		<Style.PageHeader title="Favorites" onBack={() => goBack()} />
 		{favorites.length > 0 ? (
 			<>
-				<Style.Row justify="center">
+				<Style.Row justify="center" gutter={16}>
 					{favorites.map((product) => (
-						<Col key={product.id} span={5}>
-							<Suspense fallback={LoadingCard}>
-								<ProductCard product={product} />
-							</Suspense>
+						<Col key={product.id} span={5} xs={12} md={6}>
+							<ProductCard product={product} />
 						</Col>
 					))}
 				</Style.Row>
@@ -46,11 +39,11 @@ export const Favorites = ({ favorites, page, handlePagination, goBack }) => (
 				<Col>
 					<Style.Empty
 						imageStyle={{
-							width: 240,
+							width: 290,
 							height: 240,
 						}}
 						image={<img src="img/icons/broken-heart.png" alt="broken-heart" />}
-						description="Sem itens favoritados"
+						description="No favorite item registred"
 					/>
 				</Col>
 			</Row>

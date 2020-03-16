@@ -20,7 +20,6 @@ import * as Style from './LayoutWrapper.style';
 
 const LayoutWrapper = ({
 	children,
-	handleSearch,
 	handleSource,
 	tagsList,
 	source,
@@ -78,7 +77,6 @@ const LayoutWrapper = ({
 LayoutWrapper.propTypes = {
 	children: PropTypes.any.isRequired,
 	searchInput: PropTypes.string,
-	handleSearch: PropTypes.func,
 	handleSearchInput: PropTypes.func,
 	source: PropTypes.array,
 	handleSource: PropTypes.func,
@@ -90,7 +88,7 @@ LayoutWrapper.defaultProps = {
 	handleSource: () => {},
 	tagsList: {},
 	searchInput: '',
-	handleSearch: () => {},
+	pathname: '/',
 	handleSearchInput: () => {},
 };
 

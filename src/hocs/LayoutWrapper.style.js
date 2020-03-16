@@ -11,7 +11,7 @@ export const Content = styled(Layout.Content)`
 	}
 	margin: 0 auto;
 	padding: 0 15px;
-	min-height: calc(100vh - 200px);
+	min-height: calc(100vh - 130px);
 	@media (min-width: 320px) and (max-width: 760px) {
 		padding: 0 25px;
 		min-height: calc(100vh - 125px);

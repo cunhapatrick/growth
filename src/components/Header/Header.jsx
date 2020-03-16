@@ -9,6 +9,7 @@ import {
 	HeartOutlined,
 	LoginOutlined,
 	LogoutOutlined,
+	SearchOutlined,
 } from '@ant-design/icons';
 
 // CSS
@@ -77,6 +78,7 @@ const Header = ({
 						<Input
 							size="large"
 							value={searchInput}
+							addonAfter={<SearchOutlined />}
 							onChange={handleSearchInput}
 							placeholder="Search products here..."
 						/>
