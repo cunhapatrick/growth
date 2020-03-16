@@ -88,7 +88,6 @@ LayoutWrapper.defaultProps = {
 	handleSource: () => {},
 	tagsList: {},
 	searchInput: '',
-	pathname: '/',
 	handleSearchInput: () => {},
 };
 
