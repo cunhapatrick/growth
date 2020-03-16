@@ -27,10 +27,16 @@ export const ActionButton = styled(Link)`
 export const CardProduct = styled(Card)`
 	img {
 		padding: 2rem;
+		height: 292px;
 	}
+	height: 370px;
+	max-height: 370px;
 	@media (max-width: 568px) {
+		height: 190px;
+		max-height: 190px;
 		img {
 			padding: 0.45rem;
+			height: 125px;
 		}
 	}
 `;

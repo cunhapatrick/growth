@@ -19,7 +19,6 @@ const Header = ({
 	user,
 	handleModalLogin,
 	handleModalSignup,
-	handleSearch,
 	logout,
 	handleSource,
 	searchInput,
@@ -79,8 +78,7 @@ const Header = ({
 							size="large"
 							value={searchInput}
 							onChange={handleSearchInput}
-							onSearch={handleSearch}
-							placeholder="Busque os produtos aqui..."
+							placeholder="Search products here..."
 						/>
 					)}
 				</Style.NavbarSearch>
@@ -102,8 +100,12 @@ const Header = ({
 								overlay={guestMenuItems}
 								placement="bottomRight"
 							>
-								<Style.Button size="large" icon={<UserOutlined />}>
-									Login or register
+								<Style.Button
+									id="btn-login"
+									size="large"
+									icon={<UserOutlined />}
+								>
+									<span>Login or Register</span>
 								</Style.Button>
 							</Style.UserDropdown>
 						</>
@@ -114,9 +116,7 @@ const Header = ({
 			{Object.keys(tagsList).length > 0 && (
 				<Style.NavScroller>
 					<Style.NavCategories>
-						<div
-							style={{ fontWeight: `bold`, fontSize: `1rem`, padding: `5px` }}
-						>
+						<div>
 							<TagFilled /> Categorias:
 						</div>
 
@@ -141,7 +141,6 @@ Header.propTypes = {
 	isLogged: PropTypes.bool.isRequired,
 	handleModalLogin: PropTypes.func.isRequired,
 	handleModalSignup: PropTypes.func.isRequired,
-	handleSearch: PropTypes.func.isRequired,
 	logout: PropTypes.func.isRequired,
 	user: PropTypes.object.isRequired,
 	handleSource: PropTypes.func.isRequired,

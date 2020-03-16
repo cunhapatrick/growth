@@ -6,6 +6,8 @@ export const Container = styled.div`
 	padding: 30px 50px;
 	@media (min-width: 320px) and (max-width: 760px) {
 		padding: 10px;
+		margin-bottom: 15px;
+		max-width: 300px;
 	}
 	background: white;
 
@@ -16,6 +18,7 @@ export const Container = styled.div`
 
 	div:not(.ant-row) {
 		margin-top: 15px;
+		word-break: break-all;
 
 		&.title {
 			margin-left: 15px;

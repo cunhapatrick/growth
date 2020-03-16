@@ -30,7 +30,7 @@ const LoadingCard = (
 			'skeleton8',
 		].map((skeleton) => (
 			<Style.Col key={skeleton} xs={12} md={6}>
-				<Style.Card>
+				<Style.Card className="card-loading">
 					<Skeleton loading active />
 				</Style.Card>
 			</Style.Col>

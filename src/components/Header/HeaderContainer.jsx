@@ -14,7 +14,6 @@ const HeaderContainer = ({
 	source,
 	handleModalLogin,
 	handleModalSignup,
-	handleSearch,
 	handleSearchInput,
 	handleSource,
 	logout,
@@ -28,7 +27,6 @@ const HeaderContainer = ({
 			handleModalSignup={handleModalSignup}
 			logout={logout}
 			searchInput={searchInput}
-			handleSearch={handleSearch}
 			handleSearchInput={handleSearchInput}
 			handleSource={handleSource}
 			tags={source}
@@ -44,7 +42,6 @@ HeaderContainer.propTypes = {
 	handleModalLogin: PropTypes.func.isRequired,
 	handleSearchInput: PropTypes.func.isRequired,
 	handleModalSignup: PropTypes.func.isRequired,
-	handleSearch: PropTypes.func.isRequired,
 	handleSource: PropTypes.func.isRequired,
 	logout: PropTypes.func.isRequired,
 	user: PropTypes.object.isRequired,

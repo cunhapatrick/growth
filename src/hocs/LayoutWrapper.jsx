@@ -60,7 +60,6 @@ const LayoutWrapper = ({
 				isLogged={logged}
 				user={user}
 				searchInput={searchInput}
-				handleSearch={handleSearch}
 				handleSearchInput={handleSearchInput}
 				handleSource={handleSource}
 				tagsList={tagsList}

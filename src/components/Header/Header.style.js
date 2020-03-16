@@ -28,6 +28,13 @@ export const CheckableTag = styled(Tag.CheckableTag)`
 
 export const Button = styled(btn)`
 	font-weight: bold;
+
+	&#btn-login span:last-of-type {
+		display: inline-block;
+		@media (max-width: 568px) {
+			display: none;
+		}
+	}
 `;
 
 // Custom Styles
@@ -94,6 +101,12 @@ export const NavCategories = styled.nav`
 	-webkit-overflow-scrolling: touch;
 	background-color: white;
 	align-items: center;
+
+	> div {
+		font-weight: bold;
+		font-size: 1rem;
+		padding: 5px;
+	}
 `;
 
 export const UserNameSpan = styled.span`
