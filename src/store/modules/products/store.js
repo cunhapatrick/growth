@@ -1,5 +1,5 @@
 export default {
-	products: [],
+	products: {},
 	page: {
 		number: 1,
 		total: 12,
@@ -7,5 +7,5 @@ export default {
 	loaded: false,
 	currentProducts: [],
 	productSelected: {},
-	errors: '',
+	error: '',
 };

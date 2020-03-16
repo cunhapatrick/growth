@@ -82,7 +82,8 @@ const reducer = (state = initialState, action) => {
 
 		case PRODUCTS_FAIL:
 			return produce(state, (draft) => {
-				draft.error.push(action.payload);
+				draft.error = action.payload.message;
+				draft.loaded = true;
 			});
 		default:
 			return state;

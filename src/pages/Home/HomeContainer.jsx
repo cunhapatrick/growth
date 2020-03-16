@@ -1,6 +1,7 @@
 import React, { useState, useLayoutEffect, useEffect } from 'react';
 import withConnect from 'store/withConnect';
 import PropTypes from 'prop-types';
+import Swal from 'sweetalert2';
 
 // HOC
 import LayoutWrapper from 'hocs/LayoutWrapper';
@@ -23,23 +24,32 @@ export const HomeContainer = ({
 	const [source, setSource] = useState([]);
 	const [searchInput, setSearchInput] = useState('');
 	const [currentPage, setCurrentPage] = useState(1);
-	const { currentProducts, page, loaded } = storeProducts;
+	const { currentProducts, page, loaded, products, error } = storeProducts;
 
 	useLayoutEffect(() => {
 		productsRequest();
 	}, [productsRequest]);
 
 	useEffect(() => {
-		if (loaded) {
+		if (loaded && products.page.total > 0) {
 			setCurrentPage(1);
 			productsPage({ order, search: searchInput, number: 1, source });
 		}
-	}, [loaded, productsPage, searchInput, order, source]);
+	}, [loaded, products, productsPage, searchInput, order, source]);
 
 	const handlePagination = (number) => {
 		setCurrentPage(number);
 		productsPage({ number, order, search: searchInput, source });
 	};
+
+	useEffect(() => {
+		if (error !== '')
+			Swal.fire({
+				icon: 'error',
+				title: 'Ops...',
+				text: error,
+			});
+	}, [error]);
 
 	const handleOrder = (o) => setOrder(o);
 

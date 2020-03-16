@@ -41,8 +41,6 @@ export const Container = styled.div`
 `;
 
 export const PageHeader = styled(pageHeader)`
-	padding: 20px 50px;
-	margin: 0 5%;
 	@media (min-width: 320px) and (max-width: 760px) {
 		padding: 0;
 		margin: 0;
